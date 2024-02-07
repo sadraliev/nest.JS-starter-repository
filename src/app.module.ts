@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-
-import { EnvironmentSchema, configuration } from '@/config/app.configuration';
+import { EnvironmentSchema, configuration, databaseConfig } from './config';
 
 @Module({
   imports: [
@@ -12,6 +12,9 @@ import { EnvironmentSchema, configuration } from '@/config/app.configuration';
       isGlobal: true,
       validate: (env) => EnvironmentSchema.parse(env),
       load: [configuration],
+    }),
+    TypeOrmModule.forRootAsync({
+      useFactory: () => databaseConfig(),
     }),
   ],
   controllers: [AppController],
