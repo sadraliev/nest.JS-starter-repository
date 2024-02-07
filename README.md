@@ -10,5 +10,6 @@ Features:
 - Configured OpenAPI (Swagger) for API documentation and exploration.
 - Included Makefile for conveniently running commands and tasks.
 - ESLint rule was added for sorting imports and maintaining proper spacing between code constructs.
+- added validation 
 
 Feel free to use this starter repository as a foundation for your Nest.JS projects. You can customize it further to suit your specific requirements and start building your application right away.
