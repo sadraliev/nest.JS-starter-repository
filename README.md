@@ -14,3 +14,8 @@ Features:
 - added pgAdmin
 
 Feel free to use this starter repository as a foundation for your Nest.JS projects. You can customize it further to suit your specific requirements and start building your application right away.
+
+
+
+npm install @nestjs/typeorm typeorm pg
+https://github.com/brocoders/nestjs-boilerplate/tree/main
